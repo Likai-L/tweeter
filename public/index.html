@@ -10,7 +10,7 @@
     <!-- External Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <style>
      @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
      </style>
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,7 +43,7 @@
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <header>
+    <header class="main-header">
       <div class="transparent-box">
         <h2>Your Name</h2>
     </div>
@@ -76,11 +77,27 @@
       
       <section class="tweets">
         <article>
-          <header></header>
-          <p></p>
-          <footer></footer>
+          <header>
+            <div class="tweet-author" >
+              <img src="images/lana.png" alt="lana">
+              <p>Lana Del Rey</p>
+            </div>
+            <p>@LanaDelRey</p>
+          </header>
+          <div class="tweets-text">
+          <p class="tweets-text">Did you know there's a tunnel under Ocean Blvd? Mosaic ceillings, painted tiles on the wall. I can't help but feel somewhat like my body marred my soul.</p>
+          </div>
+          <footer>
+            <p>10 days ago</p>
+            <div class="interactions">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
         </article>
       </section>
+      <div>empty</div>
     </main>
 
   </body>
