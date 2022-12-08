@@ -4,6 +4,10 @@
   margin-top: 50px;
 }
 
+.tweets:hover {
+  box-shadow: 10px 10px #c1c3dc;
+}
+
 .tweets-text {
   height: 150px;
   margin: auto;
@@ -19,13 +23,9 @@
 
 .tweets header {
   height: 95px;
-  background-color: pink;
   display: flex;
   justify-content: space-between;
-}
-
-.tweets header div {
-  margin-left: 35px;
+  align-items: center;
 }
 
 .tweets footer {
@@ -40,5 +40,37 @@
 
 .tweets footer p {
   margin-left: 26px;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.tweet-author {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.tweet-author img {
+  width: 100px;
+}
+
+.tweets header>p {
+  font-size: 36px;
+  font-weight: 600;
+  color: #c6cbe1;
+  margin-right: 30px;
+}
+
+.interactions {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  color: #3e4d8f;
+}
+
+.interactions i:hover {
+  color: #c78d30;
+  cursor: pointer;
 }
