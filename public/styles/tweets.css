@@ -1,14 +1,14 @@
-#tweets-container article {
+.tweet {
   width: 100%;
   border: 4px solid #4b4741;
   margin-top: 50px;
 }
 
-#tweets-container article:hover {
+.tweet:hover {
   box-shadow: 10px 10px #c1c3dc;
 }
 
-.tweets-text {
+.tweet-text {
   height: 150px;
   margin: auto;
   display: flex;
@@ -17,30 +17,22 @@
   font-weight: 400;
 }
 
-.tweets-text p {
+.tweet-text p {
   margin: 0 35px;
 }
 
-#tweets-container article header {
+.tweet header {
   height: 95px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#tweets-container article footer {
-  height: 70px;
-  width: 98%;
-  border-top: 4px solid #4b4741;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#tweets-container article footer p {
-  margin-left: 26px;
-  font-size: 20px;
+.tweet header>p {
+  font-size: 36px;
+  font-weight: 600;
+  color: #c6cbe1;
+  margin-right: 30px;
 }
 
 .tweet-author {
@@ -55,11 +47,19 @@
   width: 100px;
 }
 
-#tweets-container article header>p {
-  font-size: 36px;
-  font-weight: 600;
-  color: #c6cbe1;
-  margin-right: 30px;
+.tweet footer {
+  height: 70px;
+  width: 98%;
+  border-top: 4px solid #4b4741;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet footer p {
+  margin-left: 26px;
+  font-size: 20px;
 }
 
 .interactions {
