@@ -1,0 +1,44 @@
+.tweets {
+  width: 100%;
+  border: 4px solid #4b4741;
+  margin-top: 50px;
+}
+
+.tweets-text {
+  height: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.tweets-text p {
+  margin: 0 35px;
+}
+
+.tweets header {
+  height: 95px;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweets header div {
+  margin-left: 35px;
+}
+
+.tweets footer {
+  height: 70px;
+  width: 98%;
+  border-top: 4px solid #4b4741;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweets footer p {
+  margin-left: 26px;
+  font-size: 16px;
+}
