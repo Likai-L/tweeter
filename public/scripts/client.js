@@ -4,6 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
+// escape function for safely inserting user text into HTML elements
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweetObj) {
   const $tweet = $(`<article class="tweet">
   <header>
@@ -14,7 +21,7 @@ const createTweetElement = function(tweetObj) {
     <p>${tweetObj.user.handle}</p>
   </header>
   <div class="tweet-text">
-  <p>${tweetObj.content.text}</p>
+  <p>${escape(tweetObj.content.text)}</p>
   </div>
   <footer>
     <p>${timeago.format(tweetObj["created_at"])}</p>
