@@ -35,10 +35,10 @@ const createTweetElement = function(tweetObj) {
   const $tweet = $(`<article class="tweet">
   <header>
     <div class="tweet-author" >
-      <img src="images/lana.png" alt="lana">
+      <img src=${tweetObj.user.avatars} alt="lana">
       <p>${tweetObj.user.name}</p>
     </div>
-    <p>@${tweetObj.user.name}</p>
+    <p>${tweetObj.user.handle}</p>
   </header>
   <div class="tweet-text">
   <p>${tweetObj.content.text}</p>
@@ -56,10 +56,12 @@ const createTweetElement = function(tweetObj) {
 };
 
 const renderTweets = function(tweetsArr) {
-  for (let tweet of tweets)
-}
-const 
-$(document).ready(function() {
-  
+  for (let tweetObj of tweetsArr) {
+    const $tweet = createTweetElement(tweetObj);
+    $('#tweets-container').append($tweet);
+  }
+};
 
+$(document).ready(function() {
+  renderTweets(data);
 });
