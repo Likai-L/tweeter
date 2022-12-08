@@ -4,27 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-// to be simplifed as the displayed time diff shouldn't be this detailed
-const getTimeDiff = function(timestamp) {
-  const date = new Date(timestamp);
-  const now = new Date();
-  let timeDiff = (now.getTime() - date.getTime()) / 1000; // time diff in seconds
-  let timeUnits = ["year", "month", "day", "hour", "minute", "second"];
-  let unitLength = [31104000, 2592000, 86400, 3600, 60, 1 ];
-  let howLong = "";
-  for (let i in timeUnits) {
-    const timeDiffInThisUnit = Math.floor(timeDiff / unitLength[i]);
-    if (timeDiffInThisUnit > 1) {
-      howLong += ` ${timeDiffInThisUnit} ${timeUnits[i]}s`;
-    } else if (timeDiffInThisUnit === 1) {
-      howLong += ` 1 ${timeUnits[i]}`;
-    }
-    timeDiff = timeDiff % unitLength[i];
-  }
-  return howLong + " ago";
-};
-
-
 const createTweetElement = function(tweetObj) {
   const $tweet = $(`<article class="tweet">
   <header>
@@ -38,7 +17,7 @@ const createTweetElement = function(tweetObj) {
   <p>${tweetObj.content.text}</p>
   </div>
   <footer>
-    <p>${getTimeDiff(tweetObj["created_at"])}</p>
+    <p>${timeago.format(tweetObj["created_at"])}</p>
     <div class="interactions">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
