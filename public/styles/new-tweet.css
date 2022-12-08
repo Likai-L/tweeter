@@ -26,3 +26,8 @@
   background-color: #394993;
   color: white;
 }
+
+.new-tweet textarea::placeholder {
+  color: #4b4741;
+  font-weight: 600;
+}
