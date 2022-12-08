@@ -32,7 +32,26 @@ const data = [
 ];
 
 const createTweetElement = function(tweetObj) {
-  const $tweet = $(`<article class="tweet">${tweetObj.content.text}</article>`);
+  const $tweet = $(`<article class="tweet">
+  <header>
+    <div class="tweet-author" >
+      <img src="images/lana.png" alt="lana">
+      <p>${tweetObj.user.name}</p>
+    </div>
+    <p>@${tweetObj.user.name}</p>
+  </header>
+  <div class="tweet-text">
+  <p>${tweetObj.content.text}</p>
+  </div>
+  <footer>
+    <p>${tweetObj["created_at"]}</p>
+    <div class="interactions">
+      <i class="fa-solid fa-flag"></i>
+      <i class="fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart"></i>
+    </div>
+  </footer>
+</article>`);
   return $tweet;
 };
 
