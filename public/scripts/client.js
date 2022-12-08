@@ -52,14 +52,24 @@ $(document).ready(function() {
   loadTweets();
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
-    const newTweetData = $(this).serialize();
+    const textBox = $(this).find("textarea");
+
+    if (textBox.val().length === 0) {
+      return alert("Your tweet cannot be empty.");
+    }
+    if (textBox.val().length > 140) {
+      return alert("Your tweet exceeds the character limit of 140.");
+    }
+
     $.ajax({
       url: "/tweets/",
       method: "POST",
-      data: newTweetData
+      data: textBox.serialize()
     })
       .then(() => {
         console.log("Tweet sent!");
+        console.log(textBox.val());
+        textBox.val("");
       })
       .catch((error) => {
         console.log(error);
