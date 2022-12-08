@@ -31,7 +31,7 @@ const createTweetElement = function(tweetObj) {
 const renderTweets = function(tweetsArr) {
   for (let tweetObj of tweetsArr) {
     const $tweet = createTweetElement(tweetObj);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 };
 
@@ -68,8 +68,9 @@ $(document).ready(function() {
     })
       .then(() => {
         console.log("Tweet sent!");
-        console.log(textBox.val());
         textBox.val("");
+        $(".counter").val(140);
+        loadTweets();
       })
       .catch((error) => {
         console.log(error);
