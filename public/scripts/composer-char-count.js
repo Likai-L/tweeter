@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 400) {
+    if ($(this).scrollTop() > 300) {
       $("nav").fadeOut(300);
       return $("#back-to-top").show(300);
      
