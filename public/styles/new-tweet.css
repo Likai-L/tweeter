@@ -12,7 +12,7 @@
   outline: none;
 }
 
-.new-tweet div {
+.new-tweet-bot {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
@@ -25,4 +25,26 @@
   border: none;
   background-color: #394993;
   color: white;
+}
+
+#error-message {
+  width: 100%;
+  height: 2em;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+  color: red;
+  border: 4px solid red;
+  margin-bottom: 30px;
+  padding-top: 6px;
+  display: none;
+}
+
+.fa-skull-crossbones {
+  float: left;
+  margin: 0 20px;
+}
+
+#error-message p {
+  float: left;
 }
