@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -5,7 +6,7 @@
 */
 
 // escape function for safely inserting user text into HTML elements
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -64,6 +65,14 @@ const hoverAnimation = function(position, duration, cb) {
     easing: "linear",
     complete: cb
   });
+};
+
+const responsiveHoverAnimation = function() {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    continuousHoverAnimation(10, 20, 200);
+  } else {
+    continuousHoverAnimation(5, 15, 200);
+  }
 };
 
 const continuousHoverAnimation = function(upPosition, downPosition, duration) {
@@ -128,11 +137,23 @@ $(document).ready(function() {
     });
   });
 
-  $(".nav-left").children().hover(function() { // must be passed in as an function(callback), not function excution(callback()), or it would immediately excute
-    continuousHoverAnimation(10, 20, 200);
-  }, function() {
+  // responsiveHoverAnimation calls continuousHoverAnimation with different arguments based on window size
+  $(".nav-left").children().hover(responsiveHoverAnimation, function() {
     $(".fa-angles-down").stop();
-    $(".fa-angles-down").css("bottom", "15px");
+    let botDistance = "15px";
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      botDistance = "10px";
+    }
+    $(".fa-angles-down").css("bottom", botDistance);
+  });
+
+  // arrow icon reposition upon window resizing to offset jQuery animation's effect on its position
+  $(window).resize(function() {
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+      $(".fa-angles-down").css("bottom", "15px");
+    } else {
+      $(".fa-angles-down").css("bottom", "10px");
+    }
   });
 
 });
