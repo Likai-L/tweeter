@@ -30,7 +30,7 @@ nav span {
 
 .nav-left p {
   position: absolute;
-  margin-top: 40px;
+  top: 40px;
 }
 
 .nav-left p:hover, .nav-left i:hover {
