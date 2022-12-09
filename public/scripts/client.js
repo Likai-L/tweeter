@@ -56,28 +56,28 @@ const loadTweets = function() {
 };
 
 // looping hover animation
-const hoverAnimation = function(position, cb) {
+const hoverAnimation = function(position, duration, cb) {
   $(".fa-angles-down").animate({
     bottom: `${position}px`
   }, {
-    duration: 200,
+    duration: duration,
     easing: "linear",
     complete: cb
   });
 };
 
-const continuousHoverAnimation = function(upPosition, downPosition) {
+const continuousHoverAnimation = function(upPosition, downPosition, duration) {
   console.log("called");
   const bot = $(".fa-angles-down").css("bottom");
   const midPosition = (upPosition + downPosition) / 2;
   if (bot === `${upPosition}px` || bot === `${midPosition}px`) {
-    hoverAnimation(downPosition, () => {
-      continuousHoverAnimation(upPosition, downPosition);
+    hoverAnimation(downPosition, duration, () => {
+      continuousHoverAnimation(upPosition, downPosition, duration);
     });
   }
   if (bot === `${downPosition}px`) {
-    hoverAnimation(upPosition, () => {
-      continuousHoverAnimation(upPosition, downPosition);
+    hoverAnimation(upPosition, duration, () => {
+      continuousHoverAnimation(upPosition, downPosition, duration);
     });
   }
 };
@@ -129,7 +129,7 @@ $(document).ready(function() {
   });
 
   $(".nav-left").children().hover(function() { // must be passed in as an function(callback), not function excution(callback()), or it would immediately excute
-    continuousHoverAnimation(10, 20);
+    continuousHoverAnimation(10, 20, 200);
   }, function() {
     $(".fa-angles-down").stop();
     $(".fa-angles-down").css("bottom", "15px");
