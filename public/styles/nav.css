@@ -37,13 +37,10 @@ nav span {
   cursor: pointer;
 }
 
-.nav-left i {
+.fa-angles-down {
   position: absolute;
   bottom: 15px;
   left: 100px;
   margin-top: 9px;
-}
-
-.fa-angles-down {
   color: red;
 }
