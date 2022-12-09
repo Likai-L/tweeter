@@ -56,24 +56,30 @@ const loadTweets = function() {
 };
 
 // looping hover animation
-const hoverAnimationDown = function() {
+const hoverAnimation = function(position, cb) {
   $(".fa-angles-down").animate({
-    bottom: "5px"
+    bottom: `${position}px`
   }, {
     duration: 200,
     easing: "linear",
-    complete: hoverAnimationUp
+    complete: cb
   });
 };
 
-const hoverAnimationUp = function() {
-  $(".fa-angles-down").animate({
-    bottom: "15px"
-  }, {
-    duration: 200,
-    easing: "linear",
-    complete: hoverAnimationDown
-  });
+const continuousHoverAnimation = function(upPosition, downPosition) {
+  console.log("called");
+  const bot = $(".fa-angles-down").css("bottom");
+  const midPosition = (upPosition + downPosition) / 2;
+  if (bot === `${upPosition}px` || bot === `${midPosition}px`) {
+    hoverAnimation(downPosition, () => {
+      continuousHoverAnimation(upPosition, downPosition);
+    });
+  }
+  if (bot === `${downPosition}px`) {
+    hoverAnimation(upPosition, () => {
+      continuousHoverAnimation(upPosition, downPosition);
+    });
+  }
 };
 
 $(document).ready(function() {
@@ -115,15 +121,18 @@ $(document).ready(function() {
   });
 
   $(".nav-left").children().click(function() {
-    $(".new-tweet").slideToggle(function() {
+    $(".new-tweet").slideToggle(function() { // the toggle slid is jumpy at the end, my guess is that when the elements disappears the margin calculation is changed and so the position is reclaculated
       if ($(this).is(":visible")) {
         $(".new-tweet").find("textarea").focus();
       }
     });
   });
 
-  $(".nav-left").children().hover(hoverAnimationDown, function() {
+  $(".nav-left").children().hover(function() { // must be passed in as an function(callback), not function excution(callback()), or it would immediately excute
+    continuousHoverAnimation(10, 20);
+  }, function() {
     $(".fa-angles-down").stop();
     $(".fa-angles-down").css("bottom", "15px");
   });
+
 });
