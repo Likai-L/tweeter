@@ -92,4 +92,13 @@ $(document).ready(function() {
         console.log(error);
       });
   });
+
+  $(".nav-left").children().click(function() {
+    $(".new-tweet").slideToggle(function() {
+      if ($(this).is(":visible")) {
+        $(".new-tweet").find("textarea").focus();
+      }
+    });
+  });
+
 });
