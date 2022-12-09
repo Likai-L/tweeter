@@ -55,6 +55,27 @@ const loadTweets = function() {
     });
 };
 
+// looping hover animation
+const hoverAnimationDown = function() {
+  $(".fa-angles-down").animate({
+    bottom: "5px"
+  }, {
+    duration: 200,
+    easing: "linear",
+    complete: hoverAnimationUp
+  });
+};
+
+const hoverAnimationUp = function() {
+  $(".fa-angles-down").animate({
+    bottom: "15px"
+  }, {
+    duration: 200,
+    easing: "linear",
+    complete: hoverAnimationDown
+  });
+};
+
 $(document).ready(function() {
   loadTweets();
   $("#new-tweet-form").submit(function(event) {
@@ -101,4 +122,8 @@ $(document).ready(function() {
     });
   });
 
+  $(".nav-left").children().hover(hoverAnimationDown, function() {
+    $(".fa-angles-down").stop();
+    $(".fa-angles-down").css("bottom", "15px");
+  });
 });
