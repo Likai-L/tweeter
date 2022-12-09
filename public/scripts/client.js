@@ -61,13 +61,22 @@ $(document).ready(function() {
     event.preventDefault();
     const textBox = $(this).find("textarea");
 
+    // hide the error message before validation
+    $("#error-message").css("display", "none");
+
+    // form validation
     if (textBox.val().length === 0) {
-      return alert("Your tweet cannot be empty.");
+      $("#error-message").find("p").text("Your tweet cannot be empty.");
+      $("#error-message").slideDown();
+      return;
     }
     if (textBox.val().length > 140) {
-      return alert("Your tweet exceeds the character limit of 140.");
+      $("#error-message").find("p").text("Your tweet is too long.");
+      $("#error-message").slideDown();
+      return;
     }
 
+    // sned the tweet content using ajax
     $.ajax({
       url: "/tweets/",
       method: "POST",
