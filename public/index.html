@@ -39,7 +39,8 @@
     <nav>
       <span>tweeter</span>
       <div class="nav-left">
-        <p><strong>Write</strong> a new tweet</p><i class="fa-solid fa-angles-down"></i>
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
 
@@ -60,6 +61,11 @@
     <main class="container">
 
       <section class="new-tweet">
+        <div id="error-message">
+          <i class="fa-solid fa-skull-crossbones"></i>
+          <p>error message</p>
+          <i class="fa-solid fa-skull-crossbones"></i>
+        </div>
         <h2>What are you humming about?</h2>
         <form method="POST" action="/tweets/" id="new-tweet-form">
           <textarea
@@ -67,7 +73,7 @@
           id="new-tweet-text"
           rows="2"
           ></textarea>
-          <div>
+          <div class="new-tweet-bot">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
