@@ -17,7 +17,8 @@ nav span {
 
 .nav-left {
   height: 120px;
-  display: flex;
+  width: 240px;
+  position: relative;
   align-items:center;
   flex-direction: column;
   font-size: 30px;
@@ -28,10 +29,18 @@ nav span {
 }
 
 .nav-left p {
+  position: absolute;
   margin-top: 40px;
 }
 
+.nav-left p:hover, .nav-left i:hover {
+  cursor: pointer;
+}
+
 .nav-left i {
+  position: absolute;
+  bottom: 15px;
+  left: 100px;
   margin-top: 9px;
 }
 
