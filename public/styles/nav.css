@@ -1,8 +1,8 @@
 nav {
-  height: 120px;
+  height: 118px;
   width: 100%;
   position: fixed;
-  background-color: #4056A1;
+  background-color: transparent;
   color: #FFFFFF;
   padding: 1.5em;
   display: flex;
