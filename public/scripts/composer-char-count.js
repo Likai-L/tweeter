@@ -12,12 +12,16 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 300) {
-      $("nav").fadeOut(300);
+    let treshold = 300;
+    if (window.matchMedia("(min-width: 1024px)")) {
+      treshold = 100;
+    }
+    if ($(this).scrollTop() > treshold) {
+      $("nav").fadeOut(200);
       return $("#back-to-top").show(300);
      
     }
-    $("nav").fadeIn(300);
+    $("nav").fadeIn(200);
     return $("#back-to-top").hide(300);
   });
 
