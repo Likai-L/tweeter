@@ -8,7 +8,7 @@
     "content": {
       "text": "Bella! Where the hell have you been loca?"
     },
-    "created_at": 1670133760183
+    "created_at": 1670050709103
   },
   {
     "user": {
@@ -17,9 +17,9 @@
       "handle": "@RBG"
     },
     "content": {
-      "text": "When I'm sometimes asked when will there be enough women on the Supreme Court? And I said when there are nine."
+      "text": "I'm sometimes asked when will there be enough women on the Supreme Court? And I say when there are nine."
     },
-    "created_at": 1670220160183
+    "created_at": 1670137109103
   },
   {
     "user": {
@@ -30,7 +30,7 @@
     "content": {
       "text": "I'm going back to 505, if it's seven-hour flight or a forty-five minute drive. In my imagination you're waiting lying on your side, with your hands btween your thighs."
     },
-    "created_at": 1670306560183
+    "created_at": 1670223509103
   },
   {
     "user": {
@@ -41,7 +41,7 @@
     "content": {
       "text": "There was a star riding through clouds one night, & I said to the star, 'Consume me'."
     },
-    "created_at": 1670392960183
+    "created_at": 1670309909103
   },
   {
     "user": {
@@ -52,7 +52,7 @@
     "content": {
       "text": "*also sobs*"
     },
-    "created_at": 1670479360183
+    "created_at": 1670396309103
   },
   {
     "user": {
@@ -63,6 +63,17 @@
     "content": {
       "text": "EVERY DAY I WAKE UP...*sobs*"
     },
-    "created_at": 1670565760183
+    "created_at": 1670482709103
+  },
+  {
+    "user": {
+      "name": "Sylvia Plath",
+      "avatars": "https://images.gr-assets.com/authors/1613135175p8/4379.jpg",
+      "handle": "@SylviaPlath"
+    },
+    "content": {
+      "text": "I took a deep breath and listened to the old brag of my heart. I am, I am, I am."
+    },
+    "created_at": 1670569109103
   }
 ]
