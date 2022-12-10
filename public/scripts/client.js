@@ -92,7 +92,7 @@ const continuousHoverAnimation = function(upPosition, downPosition, duration) {
 
 const loadComposeButton = function() {
   if (window.matchMedia("(max-width: 768px)").matches) {
-    $(".nav-left p").text("Write");
+    $(".nav-left p").text("Compose");
   } else {
     $(".nav-left p").empty();
     $(".nav-left p").append("<strong>Write</strong> a new tweet");
