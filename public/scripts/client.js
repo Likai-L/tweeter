@@ -76,7 +76,6 @@ const responsiveHoverAnimation = function() {
 };
 
 const continuousHoverAnimation = function(upPosition, downPosition, duration) {
-  console.log("called");
   const bot = $(".fa-angles-down").css("bottom");
   const midPosition = (upPosition + downPosition) / 2;
   if (bot === `${upPosition}px` || bot === `${midPosition}px`) {
@@ -91,8 +90,21 @@ const continuousHoverAnimation = function(upPosition, downPosition, duration) {
   }
 };
 
+const loadComposeButton = function() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $(".nav-left p").text("Write");
+  } else {
+    $(".nav-left p").empty();
+    $(".nav-left p").append("<strong>Write</strong> a new tweet");
+  }
+};
+
 $(document).ready(function() {
+
   loadTweets();
+
+  loadComposeButton();
+
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
     const textBox = $(this).find("textarea");
@@ -149,11 +161,13 @@ $(document).ready(function() {
 
   // arrow icon reposition upon window resizing to offset jQuery animation's effect on its position
   $(window).resize(function() {
+    loadComposeButton();
     if (window.matchMedia("(max-width: 1024px)").matches) {
       $(".fa-angles-down").css("bottom", "15px");
     } else {
       $(".fa-angles-down").css("bottom", "10px");
     }
   });
+
 
 });
