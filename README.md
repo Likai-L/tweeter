@@ -16,7 +16,7 @@ Tweeter is a single-page Twitter clone built with HTML, CSS, JS, jQuery and AJAX
 1. Clone this repository to your local device.
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm start` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> and browse away.
+4. Go to <http://localhost:8080/> in your browser.
 5. Have fun!
 
 ## Demonstration
