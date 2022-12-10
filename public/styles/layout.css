@@ -157,10 +157,21 @@ body {
   body nav {
     padding: 1em;
   }
+
   body nav span {
     font-size: 28px;
   }
+
   body .nav-left {
-    
+    width: 100px;
+  }
+
+  body .nav-left p {
+    right: 0;
+    font-weight: 600;
+  }
+
+  body .fa-angles-down {
+    left: 30px;
   }
 }
