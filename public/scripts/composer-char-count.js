@@ -13,15 +13,17 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     let treshold = 300;
+    let element = $("nav");
     if (window.matchMedia("(min-width: 1024px)")) {
       treshold = 100;
+      element = $(".nav-left");
     }
     if ($(this).scrollTop() > treshold) {
-      $("nav").fadeOut(200);
+      element.fadeOut(200);
       return $("#back-to-top").show(300);
      
     }
-    $("nav").fadeIn(200);
+    element.fadeIn(200);
     return $("#back-to-top").hide(300);
   });
 
