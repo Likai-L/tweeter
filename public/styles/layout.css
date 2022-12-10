@@ -123,10 +123,10 @@ body {
   }
 
   body .main-header {
-    width: 30%;
-    margin-top: 150px;
-    height: 400px;
-    margin-left: 50px;
+    width: 32%;
+    margin-top: 170px;
+    height: 500px;
+    margin-left: 40px;
     position: fixed;
   }
 
@@ -135,9 +135,9 @@ body {
   }
 
   body main {
-    width: 50%;
+    width: 56%;
     margin-top: 150px;
-    margin-right: 50px;
+    margin-right: 40px;
   }
 }
 
