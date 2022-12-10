@@ -18,3 +18,7 @@
 .main-header strong {
   font-weight: 600;
 }
+
+.main-header img {
+  width: 250px;
+}
