@@ -99,6 +99,7 @@ body {
   body nav {
     background-color: teal;
     height: 70px;
+    background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
   }
 
   body nav span {
