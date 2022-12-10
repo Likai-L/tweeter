@@ -140,3 +140,27 @@ body {
     margin-right: 50px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  body .tweet-author {
+    font-size: 28px;
+  }
+
+  body .tweet header>p {
+    font-size: 28px;
+  }
+
+  body .tweet-text {
+    font-size: 24px;
+  }
+
+  body nav {
+    padding: 1em;
+  }
+  body nav span {
+    font-size: 28px;
+  }
+  body .nav-left {
+    
+  }
+}
