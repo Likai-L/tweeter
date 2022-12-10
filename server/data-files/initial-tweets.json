@@ -1,24 +1,68 @@
 [
   {
     "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+      "name": "Jacob Black",
+      "avatars": "http://images5.fanpop.com/image/photos/27200000/Jacob-Black-Wallpaper-jacob-black-27258025-1024-768.jpg",
+      "handle": "@vampireSlayer123"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Bella! Where the hell have you been loca?"
     },
-    "created_at": 1461116232227
+    "created_at": 1670133760183
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
+      "name": "Ruth Bader Ginsburg",
+      "avatars": "https://preview.redd.it/ozfkbnbs00o51.jpg?width=640&crop=smart&auto=webp&s=5de5caf8b9996f966b2032b397c36495de2967ab",
+      "handle": "@RBG"
     },
-    "created_at": 1461113959088
+    "content": {
+      "text": "When I'm sometimes asked when will there be enough women on the Supreme Court? And I said when there are nine."
+    },
+    "created_at": 1670220160183
+  },
+  {
+    "user": {
+      "name": "Alex Turner",
+      "avatars": "https://images.anothermanmag.com/1000/azure/anotherman-prod/360/6/366567.jpg",
+      "handle": "@Arctic_Alex"
+    },
+    "content": {
+      "text": "I'm going back to 505, if it's seven-hour flight or a forty-five minute drive. In my imagination you're waiting lying on your side, with your hands btween your thighs."
+    },
+    "created_at": 1670306560183
+  },
+  {
+    "user": {
+      "name": "Virginia Woolf",
+      "avatars": "https://i0.wp.com/talkinghumanities.blogs.sas.ac.uk/files/2018/06/VirginiaWoolf.jpg?fit=1200%2C1067&ssl=1",
+      "handle": "@VirginiaWoolf"
+    },
+    "content": {
+      "text": "There was a star riding through clouds one night, & I said to the star, 'Consume me'."
+    },
+    "created_at": 1670392960183
+  },
+  {
+    "user": {
+      "name": "Nicole",
+      "avatars": "https://i.redd.it/4pqiv06a9su61.jpg",
+      "handle": "@ScarlettJo"
+    },
+    "content": {
+      "text": "*also sobs*"
+    },
+    "created_at": 1670479360183
+  },
+  {
+    "user": {
+      "name": "Charlie",
+      "avatars": "https://decider.com/wp-content/uploads/2019/12/adam-driver-marriage-story-7.jpg?quality=80&strip=all&w=1024",
+      "handle": "@AdamDriver"
+    },
+    "content": {
+      "text": "EVERY DAY I WAKE UP...*sobs*"
+    },
+    "created_at": 1670565760183
   }
 ]
