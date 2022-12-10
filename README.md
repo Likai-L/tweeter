@@ -23,11 +23,11 @@ Tweeter is a single-page Twitter clone built with HTML, CSS, JS, jQuery and AJAX
 <br>
 
 !["toggle"](https://github.com/Likai-L/tweeter/blob/master/docs/toggle.gif?raw=true)
-<p align="center">Clicking on the "Write a new tweet" button opens and closes the text box with a sliding animation. The text box automatically gains focus.</p>
+<p align="center">Clicking on the "Write a new tweet" button opens and closes the text box with a sliding animation. The text box automatically gains focus upon showing.</p>
 <br>
 
 !["tweet"](https://github.com/Likai-L/tweeter/blob/master/docs/tweet.gif?raw=true)
-<p align="center">Newly sent tweets go straight to the tweets section below without the page reloading.</p>
+<p align="center">Newly sent tweets go straight to the "tweets" section below without the page reloading.</p>
 <br>
 
 !["empty-tweet"](https://github.com/Likai-L/tweeter/blob/master/docs/empty%20tweet.gif?raw=true)
