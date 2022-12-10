@@ -5,7 +5,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px #c1c3dc;
+  box-shadow: 10px 10px rgb(160, 200, 200);
 }
 
 .tweet-text {
@@ -31,7 +31,7 @@
 .tweet header>p {
   font-size: 36px;
   font-weight: 600;
-  color: #c6cbe1;
+  color: rgba(178, 206, 206, 0.72);
   margin-right: 30px;
 }
 
@@ -69,7 +69,7 @@
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
-  color: #3e4d8f;
+  color: rgb(5, 63, 63);
 }
 
 .interactions i:hover {

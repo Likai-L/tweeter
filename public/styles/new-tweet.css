@@ -23,8 +23,14 @@
 .new-tweet button {
   width: 110px;
   border: none;
-  background-color: #394993;
+  background-color: #1B7378;
   color: white;
+}
+
+.new-tweet button:hover {
+  background-color: inherit;
+  color: #1B7378;
+  cursor: pointer;
 }
 
 #error-message {
