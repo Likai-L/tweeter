@@ -126,6 +126,11 @@ body {
     margin-top: 150px;
     height: 400px;
     margin-left: 50px;
+    position: fixed;
+  }
+
+  body .main-header:hover {
+    box-shadow: 10px 10px rgb(160, 200, 200);
   }
 
   body main {
