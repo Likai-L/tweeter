@@ -174,4 +174,12 @@ body {
   body .fa-angles-down {
     left: 30px;
   }
+
+  body #back-to-top {
+    width: 70px;
+  }
+
+  body #back-to-top:hover {
+    width: 80px;
+  }
 }
