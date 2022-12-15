@@ -56,6 +56,20 @@ const loadTweets = function() {
     });
 };
 
+const loadNewTweet = function() {
+  $.ajax({
+    url: "/tweets/",
+    method: "GET"
+  })
+    .then((tweets) => {
+      const $tweet = createTweetElement(tweets[tweets.length - 1]);
+    $('#tweets-container').prepend($tweet);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 // looping hover animation
 const hoverAnimation = function(position, duration, cb) {
   $(".fa-angles-down").animate({
@@ -124,7 +138,7 @@ $(document).ready(function() {
       return;
     }
 
-    // sned the tweet content using ajax
+    // send the tweet content using ajax
     $.ajax({
       url: "/tweets/",
       method: "POST",
@@ -134,7 +148,7 @@ $(document).ready(function() {
         console.log("Tweet sent!");
         textBox.val("");
         $(".counter").val(140);
-        loadTweets();
+        loadNewTweet();
       })
       .catch((error) => {
         console.log(error);
@@ -142,7 +156,7 @@ $(document).ready(function() {
   });
 
   $(".nav-left").children().click(function() {
-    $(".new-tweet").slideToggle(function() { // the toggle slid is jumpy at the end, my guess is that when the elements disappears the margin calculation is changed and so the position is reclaculated
+    $(".new-tweet").slideToggle(function() { // the toggle slide is jumpy at the end, my guess is that when the elements disappears the margin calculation is changed and so the position is reclaculated
       if ($(this).is(":visible")) {
         $(".new-tweet").find("textarea").focus();
       }
